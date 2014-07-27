@@ -1,0 +1,31 @@
+---
+title: "README"
+author: "EmilyMazo"
+date: "July 27, 2014"
+output: html_document
+---
+
+The run_analysis.R script file was created as a course project assignment as part of the Coursera "Getting and Cleaning Data" course in the Data Science Specialization Track offered by Johns Hopkins University. 
+
+The data to be analyzed by the run_analysis.R script file is found here: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+Extract all files from subfolders and put them all in the UCI HAR Dataset folder, make this your working directory. run_analysis.R can then by run from there. 
+
+This data set can be attributed to: 
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+The variable names in the "tidy_data.csv" file created by the run_analysis.R script file can be found in the "run_analysis Code Book.Rmd" file also found in this repo. 
+
+run_analysis.R is used to tidy up a messy data set: 
+1. Merges all data from the training data set together into one data.frame (all the subject ID's, the activity labels, and the observations themselves).
+2. Does the same for the test data set.
+3. Renames the columns of both data frames by the variable names included in the .zip file for the original data (561 measurements per observation).
+4. Labels the activities in each data frame by a descriptive factor instead of a number.
+5. Merges the training and test data sets together to create one data set.
+6. Subsets only the variables that have to do with mean or standard deviation. 
+7. Uses aggregate() to organize the data set into mean measurements of all of the variables by the subject and activity. 
+8. Writes the tidy data set into a file "tidy_data.csv" in the working directory. 
+
+Descriptions of the raw data set can be found here: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#

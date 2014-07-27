@@ -1,0 +1,447 @@
+---
+title: "run_analysis Code Book"
+author: "EmilyMazo"
+date: "July 27, 2014"
+output: html_document
+---
+
+Data Dictionary
+
+Subject 1
+        Factor
+        Number ID for subjects 1-30 in test or training experiments
+
+Activity
+        2
+        Factor 
+        "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"
+        
+"tBodyAcc-std()-X"  
+        3
+        Numeric
+        Standard deviation of body acceleration in X direction
+        
+"tBodyAcc-std()-Y"   
+        4
+        Numeric
+        Standard deviation of body acceleration in Y direction
+        
+"tBodyAcc-std()-Z"  
+        5
+        Numeric
+        Standard deviation of body acceleration in Z direction
+        
+"tGravityAcc-std()-X"  
+        6
+        Numeric
+        Standard deviation of Gravity measumurements in X direction
+
+"tGravityAcc-std()-Y" 
+        7
+        Numeric
+        Standard deviation of Gravity measumurements in Y direction
+ 
+ "tGravityAcc-std()-Z"  
+        8
+        Numeric
+        Standard deviation of Gravity measumurements in Z direction
+
+"tBodyAccJerk-std()-X"  
+        9
+        Numeric
+        Standard deviation of body jerk in X direction
+ 
+ "tBodyAccJerk-std()-Y"
+        10
+        Numeric
+        Standard deviation of body jerk in Y direction
+   
+"tBodyAccJerk-std()-Z"  
+        11
+        Numeric
+        Standard deviation of body jerk in Z direction
+        
+"tBodyGyro-std()-X" 
+        12
+        Numeric
+        Standard deviation of gyroscopic measurements in X direction
+        
+"tBodyGyro-std()-Y" 
+        13
+        Numeric
+        Standard deviation of gyroscopic measurements in X direction
+        
+"tBodyGyro-std()-Z"   
+        14
+        Numeric
+        Standard deviation of gyroscopic measurements in X direction
+        
+"tBodyGyroJerk-std()-X"
+        15
+        Numeric
+        Standard deviation of jerk from gyroscopic measurements in X direction
+
+"tBodyGyroJerk-std()-Y"  
+        16
+        Numeric
+        Standard deviation of jerk from gyroscopic measurements in Y direction
+
+"tBodyGyroJerk-std()-Z"
+        17
+        Numeric
+        Standard deviation of jerk from gyroscopic measurements in Z direction
+
+"tBodyAccMag-std()"   
+        18
+        Numeric
+        Standard deviation of magnitude of acceleration
+
+"tGravityAccMag-std()"  
+        19 
+        Numeric
+        Standard deviation of acceleration with respect to gravity (magnitude)
+
+"tBodyAccJerkMag-std()"  
+        20
+        Numeric
+        Standard deviation of magnitude of body accleration due to jerk
+        
+"tBodyGyroMag-std()"     
+        21
+        Numeric
+        Standard deviation of magnitude of gyroscopic measurements
+        
+"tBodyGyroJerkMag-std()" 
+        22      
+        Numeric
+        Standard deviation of magnitude of jerk measurments by gyroscope
+        
+"fBodyAcc-std()-X"
+        23
+        Numeric
+        Standard deviation of body accleration in X direction
+
+"fBodyAcc-std()-Y"   
+        24
+        Numeric
+        Standard deviation of body acceleration in Y direction
+        
+"fBodyAcc-std()-Z"  
+        25
+        Numeric
+        Standard deviation of body acceleration in Z direction
+        
+"fBodyAccJerk-std()-X"
+        26
+        Numeric
+        Standard deviation of accleration due to jerk in X direction
+        
+ "fBodyAccJerk-std()-Y"        
+        27
+        Numeric
+        Standard deviation of accleration due to jerk in Y direction
+        
+"fBodyAccJerk-std()-Z"          
+        28
+        Numeric
+        Standard deviation of accleration due to jerk in Z direction
+        
+"fBodyGyro-std()-X"
+        29
+        Numeric 
+        Standard deviation of gyroscopic measurements in X direction
+        
+fBodyGyro-std()-Y"          
+        30
+        Numeric 
+        Standard deviation of gyroscopic measurements in Y direction
+        
+"fBodyGyro-std()-Z"         
+        31
+        Numeric 
+        Standard deviation of gyroscopic measurements in Z direction
+        
+"fBodyAccMag-std()"   
+        32
+        Numeric
+        Standard deviation of magnitudes of accleration
+        
+"fBodyBodyAccJerkMag-std()" 
+        33
+        Numeric
+        Standard deviation of magnitudes of acceleration due to jerk
+
+"fBodyBodyGyroMag-std()"
+        34
+        Numeric
+        Standard deviation of gyroscopic measurments (magnitude)
+        
+"fBodyBodyGyroJerkMag-std()" 
+        35
+        Numeric
+        Standard deviation of gyroscipic jerk measurements (magnitude)
+        
+"tBodyAcc-mean()-X"    
+        36
+        Numeric
+        mean of body acceleration in X direction
+        
+tBodyAcc-mean()-Y"  
+        37
+        Numeric
+        Mean of body acceleration in Y direction
+        
+"tBodyAcc-mean()-Z"   
+        38
+        Numeric
+        Mean of body acceleration in Z direction
+        
+"tGravityAcc-mean()-X"    
+        39
+        Numeric
+        Mean of Gravity measumurements in X direction
+
+"tGravityAcc-mean()-Y" 
+        40
+        Numeric
+        Mean of Gravity measumurements in Y direction
+ 
+ "tGravityAcc-mean()-Z"  
+        41
+        Numeric
+        Mean of Gravity measumurements in Z direction
+
+"tBodyAccJerk-mean()-X" 
+        42
+        Numeric
+        Mean of body jerk in X direction
+ 
+"tBodyAccJerk-mean()-Y" 
+        43
+        Numeric
+        Mean of body jerk in Y direction
+   
+"tBodyAccJerk-mean()-Z"   
+        44
+        Numeric
+        Mean of body jerk in Z direction
+        
+"tBodyGyro-mean()-X" 
+        45
+        Numeric
+        Mean of gyroscopic measurements in X direction
+        
+"tBodyGyro-mean()-Y"   
+        46
+        Numeric
+        Mean of gyroscopic measurements in X direction
+        
+"tBodyGyro-mean()-Z"  
+        47
+        Numeric
+        Mean of gyroscopic measurements in X direction
+        
+"tBodyGyroJerk-mean()-X"  
+        48
+        Numeric
+        Mean of jerk from gyroscopic measurements in X direction
+
+"tBodyGyroJerk-mean()-Y" 
+        49
+        Numeric
+        Mean of jerk from gyroscopic measurements in Y direction
+
+"tBodyGyroJerk-mean()-Z"
+        50
+        Numeric
+        Mean of jerk from gyroscopic measurements in Z direction
+
+"tBodyAccMag-std()"   
+        51
+        Numeric
+        Standard deviation of magnitude of acceleration
+
+"tGravityAccMag-mean()"  
+        52 
+        Numeric
+        Mean of acceleration with respect to gravity (magnitude)
+
+"tBodyAccJerkMag-mean()" 
+        53
+        Numeric
+        Mean of magnitude of body accleration due to jerk
+        
+"tBodyGyroMag-mean()"     
+        54
+        Numeric
+        Mean of magnitude of gyroscopic measurements
+        
+"tBodyGyroJerkMag-mean()"  
+        55      
+        Numeric
+        Mean of magnitude of jerk measurments by gyroscope
+        
+"fBodyAcc-mean()-X"
+        56
+        Numeric
+        Mean of body accleration in X direction
+
+"fBodyAcc-mean()-Y"  
+        57
+        Numeric
+        Mean of body acceleration in Y direction
+        
+"fBodyAcc-mean()-Z"
+        58
+        Numeric
+        Mean of body acceleration in Z direction
+        
+"fBodyAcc-meanFreq()-X
+        59
+        Numeric
+        Mean frequency of body accleration measurements in X direction
+        
+"fBodyAcc-meanFreq()-Y"      
+        60
+        Numeric
+        Mean frequency of body acceleration measurements in Y direction
+        
+"fBodyAcc-meanFreq()-Z"           
+        61
+        Numeric
+        Mean frequency of body acceleration measurements in Z direction
+        
+"fBodyAccJerk-mean()-X" 
+        62
+        Numeric
+        Mean of accleration due to jerk in X direction
+        
+"fBodyAccJerk-mean()-Y"        
+        63
+        Numeric
+        Mean of accleration due to jerk in Y direction
+        
+"fBodyAccJerk-mean()-Z"          
+        64
+        Numeric
+        Mean of accleration due to jerk in Z direction
+        
+"fBodyAccJerk-meanFreq()-X" 
+        65
+        Numeric
+        Mean frequency of measurements of accleration due to jerk in X direction
+        
+ "fBodyAccJerk-meanFreq()-Y"         
+         66
+        Numeric
+        Mean frequency of measurements of accleration due to jerk in Y direction
+        
+"fBodyAccJerk-meanFreq()-Z"         
+         67
+        Numeric
+        Mean frequency of measurements of accleration due to jerk in Z direction
+        
+"fBodyGyro-mean()-X" 
+        68
+        Numeric 
+        Mean of gyroscopic measurements in X direction
+        
+"fBodyGyro-mean()-Y"           
+        69
+        Numeric 
+        Mean of gyroscopic measurements in Y direction
+        
+"fBodyGyro-mean()-Z"           
+        70
+        Numeric 
+        Mean of gyroscopic measurements in Z direction
+        
+"fBodyGyro-meanFreq()-X" 
+        71
+        Numeric
+        Mean frequency of gyroscopic measurements in X direction
+        
+"fBodyGyro-meanFreq()-Y"         
+        72
+        Numeric
+        Mean frequency of gyroscopic measurements in Y direction
+        
+"fBodyGyro-meanFreq()-Z"          
+        73
+        Numeric
+        Mean frequency of gyroscopic measurements in Z direction
+
+"fBodyAccMag-mean()"     
+        74
+        Numeric
+        Mean of magnitudes of accleration
+
+"fBodyAccMag-meanFreq()"
+        75
+        Numeric
+        Mean frequency of acceleration measurements (magnitude)
+        
+"fBodyBodyAccJerkMag-mean()"  
+        76
+        Numeric
+        Mean of magnitudes of acceleration due to jerk
+
+"fBodyBodyAccJerkMag-meanFreq()"
+        77
+        Numeric
+        Mean frequency of Jerk measurements (magnitude)
+
+"fBodyBodyGyroMag-mean()" 
+        78
+        Numeric
+        Mean of gyroscopic measurments (magnitude)
+
+"fBodyBodyGyroMag-meanFreq()" 
+        79
+        Numeric
+        Mean frequency of gyroscopic measurements (magnitude)
+        
+"fBodyBodyGyroJerkMag-mean()"
+        80
+        Numeric
+        Mean of gyroscipic jerk measurements (magnitude)
+        
+"fBodyBodyGyroJerkMag-meanFreq()" 
+        81
+        Numeric
+        Mean frequency of grysocopic jerk measurements (magnitude)
+        
+"angle(tBodyAccMean,gravity)"  
+        82
+        Numeric
+        Mean angle of body acceleration due to gravity
+
+ "angle(tBodyAccJerkMean),gravityMean)"
+        83
+        Numeric
+        Mean angle of body acceleration due to jerk
+        
+"angle(tBodyGyroMean,gravityMean)"    
+        84
+        Numeric
+        Mean angle of body gyroscopic measurements with respect to gravity
+        
+ "angle(tBodyGyroJerkMean,gravityMean)"
+        85
+        Numeric
+        Mean angle of jerk measurements with respect to gravity
+        
+"angle(X,gravityMean)"  
+        86
+        Numeric
+        Angle between X direction and gravity
+        
+"angle(Y,gravityMean)"   
+        87
+        Numeric
+        Angle between Y direction and gravity
+        
+"angle(Z,gravityMean)" 
+        88
+        Numeric
+        Angle between Z direction and gravity
